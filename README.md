@@ -1,69 +1,74 @@
 # Prose Craft 2
 
-A Claude skill for writing creative prose that reads as human-authored, not machine-default.
+You've read AI fiction. You know the voice — lyrical, restrained, every emotion rendered through a tightening chest and a dimming light. The quiet ending. The earned silence. Beautiful, in its way. And now, after sixty thousand stories analyzed by StoryScope (Russell et al. 2026), identifiable as machine-written at 93% accuracy from narrative structure alone. Style didn't matter. A professional editor couldn't scrub the tell. The structure *was* the tell.
 
-## What this is
+This is a [Claude](https://claude.ai) skill that fixes that.
 
-A skill for [Claude](https://claude.ai) that teaches it to write fiction with genuine craft — rhythm, restraint, figurative language, sentence-level music — **and** to avoid the structural patterns that make AI prose detectable.
+## The problem it solves
 
-Built on research (StoryScope, Russell et al. 2026) showing AI fiction is identifiable at 93% accuracy from **narrative structure alone**, even after professional style editing. The skill keeps Claude's craft abilities and adds a calibration layer that pushes each piece off Claude's known defaults.
+Claude writes gorgeous prose. It also writes the *same* gorgeous prose every time — linear chronology, embodied-only emotion, sealed fictive dream, a single clean plot thread resolving through quiet acceptance. That convergence is the fingerprint. Not any one choice, but all of them at once, every time.
 
-## What's inside
+Prose Craft 2 keeps the craft and breaks the convergence. It teaches Claude when to fracture a timeline, when to name a feeling plainly instead of reaching for another somatic metaphor, when to let an ending *bang* instead of fade, when to let a protagonist stay compromised. Not as new rules — as live choices, made per piece, for reasons that serve the material.
 
-- **SKILL.md** — the core skill instructions (philosophy, anti-patterns, the Posture Board, two-pass system, four modes)
-- **references/** — 9 reference files covering:
-  - `human-signal.md` — the key addition: how to diverge from measured AI signatures
-  - `sound-and-rhythm.md` — alliteration, vowel music, cacophony, prosodic rhythm
-  - `repetition-and-structure.md` — anaphora, chiasmus, parallelism, sentence architecture
-  - `figurative-language.md` — metaphor, simile, metonymy, irony, symbolism
-  - `narrative-craft.md` — story structure, POV, psychic distance, temporal architecture
-  - `dialogue-and-voice.md` — character voice, speech rhythm, subtext, register
-  - `pacing-and-paragraphs.md` — sentence/paragraph length variation, scene vs summary
-  - `effects-toolkit.md` — maps desired reader effects to specific techniques
-  - `discourse-and-argument.md` — rhetorical structure, persuasive devices
+## The Posture Board
 
-## The Posture Board (the key innovation)
+The core mechanism. Before writing anything, the skill forces an explicit position on nine axes where Claude has measured defaults:
 
-Before writing any piece, the skill forces Claude to take an explicit position on 9 axes where it has known defaults:
-
-| Axis | Claude's default | Divergent pole |
+| Axis | Claude's default | The other pole |
 |------|-----------------|----------------|
-| Time order | linear, chronological | nonlinear, flashback, delayed disclosure |
-| Emotion rendering | embodied only (chest, breath) | sometimes name the feeling plainly |
-| Narrator-reader relationship | sealed fictive dream | direct address, fourth-wall |
-| World reference | self-contained, invented | names real books, brands, places |
-| Escalation | flat, quiet ending | genuine escalation, "avalanche" endings |
-| Plot shape | single track | subplots, ensemble, multiple locations |
-| Protagonist morality | clear, sympathetic | ambivalent, compromised |
-| Sensory density | lush, smell-heavy | spare, withheld |
-| Dialogue function | one register (philosophical) | mixed — gossip, logistics, comedy |
+| Time | linear | nonlinear, flashback, delayed disclosure |
+| Emotion | embodied only | sometimes just name it |
+| Narrator | sealed dream | direct address, fourth wall |
+| World | invented, generic | real books, real brands, real places |
+| Escalation | flat, quiet fade | genuine rise, avalanche endings |
+| Plot | single track | subplots, ensemble |
+| Morality | clear, sympathetic | ambivalent, compromised |
+| Senses | lush, smell-heavy | spare, withheld |
+| Dialogue | philosophical debate | gossip, logistics, comedy, evasion |
 
-At least 3 axes must be pushed off center per piece, chosen to serve the material.
+At least three axes get pushed off center. Chosen for the material, not at random. Committed to fully, not hedged.
+
+Across many pieces, because every piece is pushed off the *same* center, the body of work spreads out. That spread — not any single trick — is what reads as human.
+
+## What's in the box
+
+**`SKILL.md`** — The core instructions. Philosophy, anti-patterns, the Posture Board, a two-pass writing system, four modes (Write, Edit, Analyze, Coach).
+
+**`references/`** — Nine files, 200+ devices across eleven families:
+
+- **`human-signal.md`** — The new one. Nine dials mapping measured human-vs-AI differences, with guidance on when and how to diverge from Claude's defaults without performing the divergence.
+- **`effects-toolkit.md`** — Organized by what you want the reader to *feel*: tension, beauty, humor, grief, speed, authority. Techniques grouped by effect, not taxonomy. Calibration warnings on the recipes that lean machine.
+- **`narrative-craft.md`** — POV, psychic distance, temporal architecture, structural multiplicity, moral framing.
+- **`dialogue-and-voice.md`** — Subtext, speech rhythm, register, diction. Why Claude's characters sound like philosophy professors and what to do about it.
+- **`sound-and-rhythm.md`** — Alliteration, assonance, cacophony, euphony, cadence. The music under the prose.
+- **`pacing-and-paragraphs.md`** — Sentence length variation, paragraph as breath, scene vs. summary, white space.
+- **`repetition-and-structure.md`** — Anaphora, chiasmus, parallelism, periodic sentences. The architecture of emphasis.
+- **`figurative-language.md`** — Metaphor, metonymy, irony, symbolism, synesthesia. The engine of imaginative prose.
+- **`discourse-and-argument.md`** — Rhetorical devices for characters who persuade, manipulate, or argue.
 
 ## Install
 
-### One-click install (Claude desktop app)
+**One-click** — Download [`prose-craft-2.skill`](https://github.com/rohittiru/prose-craft-2/releases/tag/v1.0.0) from Releases. Drag it into Claude, or import it under **Settings → Skills**.
 
-1. Download `prose-craft-2.skill` from [Releases](../../releases)
-2. Open Claude desktop app
-3. Drag the `.skill` file into Claude, or go to **Settings > Skills** and import it
-
-### Manual install
-
-Copy the `prose-craft-2/` directory into your Claude skills folder:
-- **Windows:** `%APPDATA%\Claude\skills\`
-- **Mac:** `~/Library/Application Support/Claude/skills/`
+**Manual** — Copy the `prose-craft-2/` directory into your skills folder:
+- Windows: `%APPDATA%\Claude\skills\`
+- Mac: `~/Library/Application Support/Claude/skills/`
 
 ## Usage
 
-Once installed, the skill triggers automatically when you ask Claude to write, edit, analyze, or coach on creative prose. Examples:
+The skill triggers automatically. Ask Claude to write a story, edit a scene, diagnose why something reads as AI, or coach you through a craft problem. It runs in four modes:
 
-- "Write me a short story about a lighthouse keeper"
-- "This scene feels flat — help me fix it"
-- "Why does this read like AI? Diagnose it."
-- "Write something about rain"
+**Write** — Discovery, then architecture (including the Posture Board), then drafting with a built-in calibration check.
 
-The skill has four modes: **Write** (original creative work), **Edit** (improve existing prose), **Analyze** (break down how a piece works), and **Coach** (guidance on craft problems).
+**Edit** — Reads your prose, identifies what works, strengthens what doesn't, and runs the Posture Board against it to diagnose machine-default patterns.
+
+**Analyze** — Breaks down how a piece works: devices, rhythm, psychic distance, paragraph structure. Can diagnose AI tells using the StoryScope vocabulary.
+
+**Coach** — Direct, specific guidance on craft problems. No platitudes.
+
+## The research behind it
+
+Built on findings from StoryScope (Russell et al. 2026), a large-scale analysis of ~61,000 stories comparing human-authored and AI-generated fiction across multiple models. The study found that narrative structure — not style — is the primary separating signal, and that Claude specifically exhibits the flattest event escalation, most uniform voice, and strongest preference for quiet endings of any model tested. The skill's nine Posture Board axes map directly to the measured structural differences.
 
 ## License
 
