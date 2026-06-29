@@ -1,6 +1,6 @@
 # Prose Craft 2
 
-A Claude skill for writing fiction and creative prose that reads as human-authored, not machine-default.
+A Claude skill for writing creative prose that reads as human-authored, not machine-default.
 
 ## What this is
 
